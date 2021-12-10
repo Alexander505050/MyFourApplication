@@ -6,7 +6,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-
+private const val  HELLO_KEY="Hello"
 const val TAG = "MainActivity"
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         nextActivityButton = findViewById(R.id.center_BUTTON)
         nextActivityButton.setOnClickListener {
             val userActivityIntent: Intent = Intent(this, UserActivity::class.java)
+           userActivityIntent.putExtra(HELLO_KEY, "Hello from MainActivity")
             startActivity(userActivityIntent)
         }
 
