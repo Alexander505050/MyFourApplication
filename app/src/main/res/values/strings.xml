@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name" translatable="false">ALEXANDER SERGEEV</string>
-    <string name="GOOD">GOOD!</string>
-    <string name="Bye_Bye">Bye</string>
+    <string name="text_GOOD">GOOD!</string>
+    <string name="button_browser">Browser</string>
     <string name="button_ENTRANCE">ENTRANCE</string>
-    <string name="reviews">Reviews</string>
+    <string name="text_reviews">Reviews</string>
     <string name="button_help">HELP</string>
 </resources>

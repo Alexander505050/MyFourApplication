@@ -12,7 +12,7 @@ class UserActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user)
-        helloTextView = findViewById(R.id.textView)
+        helloTextView = findViewById(R.id.textSecond)
         val helloValue:String? = intent.extras?.getString(HELLO_KEY)
         helloTextView.text = helloValue
     }

@@ -1,12 +1,14 @@
 package com.alexsandersuper.myfourapplication
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-private const val  HELLO_KEY="Hello"
+
+private const val HELLO_KEY = "Hello"
 const val TAG = "MainActivity"
 
 class MainActivity : AppCompatActivity() {
@@ -16,17 +18,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         nextActivityButton = findViewById(R.id.center_BUTTON)
+
         nextActivityButton.setOnClickListener {
             val userActivityIntent: Intent = Intent(this, UserActivity::class.java)
-           userActivityIntent.putExtra(HELLO_KEY, "Hello from MainActivity")
+            userActivityIntent.putExtra(HELLO_KEY, "Добро пожаловать")
             startActivity(userActivityIntent)
         }
+        nextActivityButton = findViewById(R.id.button_browser)
 
-        val helloTextView: TextView = findViewById(R.id.textView)
+        nextActivityButton.setOnClickListener {
+            val googlelink = Uri.parse("https://google.com")
+            val openBrowserIntent = Intent(Intent.ACTION_VIEW, googlelink)
+            startActivity(openBrowserIntent)
+
+        }
+        val helloTextView: TextView = findViewById(R.id.text_GOOD)
         val newTextButton: Button = findViewById(R.id.button_help)
         newTextButton.setOnClickListener {
             helloTextView.text = "Нажмите на ENTRANCE"
-           
+
         }
 
         Log.d(
